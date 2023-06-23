@@ -1,0 +1,18 @@
+.register-table table{
+	font-family: 'Oswald', sans-serif;
+	border-collapse: collapse;
+	//width: 100%;
+	//border: 1px solid #6b675d;
+}
+
+.register-table td {
+	border: solid 1px #5ceffe;
+	text-align: center;
+	padding: 8px 4px;
+	color: #000000;
+	width: 20px;
+}
+
+.register-table .resv{
+	background-color: #999999;
+}
