@@ -2,7 +2,7 @@
 	font-family: 'Oswald', sans-serif;
 	border-collapse: collapse;
 	//width: 100%;
-	//border: 1px solid #6b675d;
+	border: 1px solid #6b675d;
 }
 
 .register-table td {
@@ -15,4 +15,27 @@
 
 .register-table .resv{
 	background-color: #999999;
+}
+
+.format-table{
+	font-family: 'Oswald', sans-serif;
+	border-collapse: collapse;
+	//width: 100%;
+	//border: 1px solid #6b675d;
+}
+
+.format-table-tr > td{
+	border: solid 1px #5ceffe;
+	text-align: center;
+	padding: 8px 4px;
+	color: #000000;
+	width: 20px;
+}
+
+.bit-table input{
+	width: 50px;
+}
+
+.format-table input{
+	text-align: center;
 }

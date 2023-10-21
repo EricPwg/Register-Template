@@ -23,11 +23,33 @@
 					</tr>
 				</table>
 			</div>
+			<div><p></p></div>
 			<div>
-				<table>
-					<tr>
+				<div>
+					<p>Max bits: <input type="number" min="0" step="1" v-model.lazy="template_input_table_config.max_bits" /> </p>
+				</div>
+				<table class="format-table">
+					<tr class="format-table-tr">
+						<td>action</td>
+						<td>bits</td>
+						<td>name</td>
+					</tr>
+					<tr v-for="(format_item, format_item_idx) in template_input_table" class="format-table-tr">
+						<td>
+							<button @click="format_item_remove(format_item_idx)">X</button>
+						</td>
+						<td>
+							<table class="bit-table"><tr v-for="(bit_range, bit_range_idx) in format_item.bit_ranges">
+								<td><input type="number" min="0" step="1" v-model.number="bit_range[0]"
+								           @change="bit_table_check_high(format_item_idx, bit_range_idx, $event)"/></td>
+								<td><input type="number" min="0" step="1" v-model.number="bit_range[1]"
+								           @change="bit_table_check_low(format_item_idx, bit_range_idx, $event)" /></td>
+							</tr></table>
+							<td><input type="text" v-model.lazy="format_item.name"></input></td>
+						</td>
 					</tr>
 				</table>
+				<button @click="format_item_new()">New format item</button>
 			</div>
 		</div>
 	</body>
